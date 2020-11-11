@@ -11,6 +11,7 @@ function GetCEP() {
     el.classList.add("input-success");
   } else if (valueInput.length <= 0) {
     setMessageError("O campo de CEP não pode ser vazio!");
+    ResetInputs();
   } else if (match === null) {
     setMessageError("CEP Inválido!");
   }
@@ -38,6 +39,14 @@ function LoadingInput() {
   document.getElementById("city").value = "Loading...";
   document.getElementById("state").value = "Loading...";
   document.getElementById("ibge").value = "Loading...";
+}
+
+function ResetInputs() {
+  document.getElementById("street").value = "";
+  document.getElementById("district").value = "";
+  document.getElementById("city").value = "";
+  document.getElementById("state").value = "";
+  document.getElementById("ibge").value = "";
 }
 
 function setMessageError(message) {

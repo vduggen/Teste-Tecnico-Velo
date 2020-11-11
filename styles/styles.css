@@ -95,7 +95,7 @@ body::before {
 }
 
 #msgErr {
-  color: rgb(143, 0, 0);
+  color: rgb(255, 0, 0);
   height: 15px;
   font: 500 1rem "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   transition: ease-in-out 0.3s;
@@ -110,4 +110,64 @@ body::before {
 
 .container-input .input-success {
   border-bottom: 2px solid rgb(0, 170, 0);
+}
+
+@media (min-width: 300px) {
+  #c-container__header {
+    height: auto;
+  }
+
+  #c-container__body {
+    margin: 0 1rem;
+    width: 85%;
+  }
+
+  #c-container {
+    width: 95%;
+    height: auto;
+    padding: 2.5rem 0;
+  }
+
+  .c-container__body__row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .container-input {
+    margin: 0.5rem 0;
+  }
+
+  #msgErr {
+    height: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  #c-container__body {
+    margin: 2.5rem auto 0 auto;
+    width: auto;
+  }
+
+  #c-container {
+    width: 95%;
+    height: 500px;
+    padding: 2.5rem 0;
+  }
+
+  .c-container__body__row {
+    width: 516px;
+    flex-direction: row;
+  }
+
+  .container-input {
+    margin: 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  #c-container {
+    width: 800px;
+    height: 500px;
+  }
 }
