@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViaCEP</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+</head>
+
+<body>
+  <main id="c-container">
+    <header id="c-container__header">
+      <h1>ViaCEP</h1>
+    </header>
+
+    <article id="c-container__body">
+      <span id="msgErr"></span>
+
+      <article class="c-container__body__row">
+        <section class="container-input">
+          <label for="cep">CEP <span>- Obrigatório</span></label>
+          <input onChange="GetCEP()" type="text" maxlength="9" id="cep" name="cep"
+            placeholder="Digite o número do seu CEP">
+        </section>
+      </article>
+
+      <article class="c-container__body__row">
+        <section class="container-input">
+          <label for="street">Rua</label>
+          <input disabled type="text" id="street" name="street">
+        </section>
+
+        <section class="container-input">
+          <label for="district">Bairro</label>
+          <input disabled type="text" id="district" name="district">
+        </section>
+      </article>
+
+      <article class="c-container__body__row">
+        <section class="container-input">
+          <label for="city">Cidade</label>
+          <input disabled type="text" id="city" name="city">
+        </section>
+
+        <section class="container-input">
+          <label for="state">Estado</label>
+          <input disabled type="text" id="state" name="state">
+        </section>
+      </article>
+
+      <article class="c-container__body__row">
+        <section class="container-input">
+          <label for="ibge">IBGE</label>
+          <input disabled type="text" id="ibge" name="ibge">
+        </section>
+      </article>
+    </article>
+  </main>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+body {
+  background-image: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  z-index: -1;
+}
+
+#c-container {
+  width: 800px;
+  height: 500px;
+  background: #666666dd;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#c-container__header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#c-container__header h1 {
+  font: bold 2.5rem "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#c-container__body {
+  width: auto;
+  height: calc(88% - 100px);
+  margin: 2.5rem auto 0 auto;
+}
+
+.c-container__body__row {
+  display: flex;
+  justify-content: space-between;
+  width: 516px;
+}
+
+.container-input {
+  margin: 0.5rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+  font: 500 1rem "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container-input label span {
+  color: rgb(165, 165, 165);
+  font-size: 0.9rem;
+}
+
+.container-input input {
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  transition: ease-in-out 0.3s;
+}
+
+.container-input input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.container-input input::placeholder {
+  color: rgb(165, 165, 165);
+}
+
+#msgErr {
+  color: rgb(143, 0, 0);
+  height: 15px;
+  font: 500 1rem "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: ease-in-out 0.3s;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container-input .input-error {
+  border-bottom: 2px solid red;
+}
+
+.container-input .input-success {
+  border-bottom: 2px solid rgb(0, 170, 0);
+}
